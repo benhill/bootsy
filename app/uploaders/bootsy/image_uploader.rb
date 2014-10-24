@@ -2,12 +2,18 @@
 module Bootsy
   class ImageUploader < CarrierWave::Uploader::Base
     include CarrierWave::MiniMagick
-
     storage Bootsy.storage
+    process :auto_orient
 
     def store_dir
       "#{Bootsy.store_dir}/#{model.class.to_s.underscore}/#{model.id}"
     end
+    
+  def auto_orient
+    manipulate! do |image|
+      image.tap(&:auto_orient)
+    end
+  end
 
     # Process files as they are uploaded:
     process resize_to_limit: [1160, 2000]
