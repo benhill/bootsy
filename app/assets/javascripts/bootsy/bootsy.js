@@ -231,6 +231,7 @@ Bootsy.Area.prototype.init = function() {
         };
 
         imageObject.align = $(this).data('position');
+        alert('hello');
 
         insert(imageObject);
       });
