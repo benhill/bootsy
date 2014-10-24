@@ -169,4 +169,4 @@ body.bootsy_text_area.form-control {
   box-shadow: none;
 }
 
-img{padding:10px};
+.bootsy_text_area img{padding 0 10px 15px 0!important;}
