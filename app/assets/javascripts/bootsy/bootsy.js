@@ -231,7 +231,12 @@ Bootsy.Area.prototype.init = function() {
         };
 
         imageObject.align = $(this).data('position');
-        alert('hello');
+        if($(this).data('position') == 'left'){
+           imageObject.class = "wysiwyg-float-left";
+        }
+        else if($(this).data('position') == 'right'){
+          imageObject.class = "wysiwyg-float-right";
+        }
 
         insert(imageObject);
       });
