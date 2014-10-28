@@ -149,6 +149,7 @@ textarea.bootsy:required:invalid {
 .bootsy-upload-loader {
   display: inline-block;
   padding-right: 5px;
+  border-width:0px;
 }
 
 .bootsy-gallery-loader {
